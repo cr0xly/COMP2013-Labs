@@ -19,7 +19,7 @@ interface Listing {
     builtIn: number|string
     taxes: number|string
     parking: string
-  },
+  }
   buildingSummary: {
     bedrooms: string|number
     bathrooms: string|number
@@ -30,6 +30,8 @@ interface Listing {
     water: string
     size: string|number
   }
+  isSold?: boolean
+  currentOwner?: string
 }
 
 const listings: Listing[] = [
@@ -511,6 +513,11 @@ const listings: Listing[] = [
  */
 //WRITE YOUR CODE BELOW
 
+const listing0: Listing = listings[0]
+console.log(listing0)
+
+
+
 /**
  * Task-3:
  * Create an object named listing0Updated of type Listing
@@ -523,6 +530,10 @@ const listings: Listing[] = [
  * Make sure to add them as OPTIONAL properties
  */
 //WRITE YOUR CODE BELOW
+
+const listing0Updated: Listing = { ...listing0, isSold: false, currentOwner: "Jane Doe" }
+
+
 
 /**
  * NOTE: THIS TASK IS TRICKY!
