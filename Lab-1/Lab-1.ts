@@ -3,6 +3,35 @@
 //Create an interface Listing that will represent an object
 //from the listings array below to resolve the type error.
 
+interface Listing {
+  id: string|number
+  price: string
+  address: string
+  postalCode: string
+  MLSnumber: string|number
+  photo: string
+  description: string
+  propertySummary: {
+    propertyType: string
+    buildingType: string
+    storeys: string|number
+    title: string
+    builtIn: number|string
+    taxes: number|string
+    parking: string
+  },
+  buildingSummary: {
+    bedrooms: string|number
+    bathrooms: string|number
+    buildingFeatures: string[]
+    cooling: string
+    heating: string
+    sewer: string
+    water: string
+    size: string|number
+  }
+}
+
 const listings: Listing[] = [
   {
     id: "10100",
@@ -512,7 +541,7 @@ const listings: Listing[] = [
  */
 //WRITE YOUR CODE BELOW
 
-console.log(parseInt((listings[2].price).replace('$', '').replace(',', ''))* 0.02) 
+console.log(parseInt((listings[2].price).replace('$', '').replace(',', ''))) 
 
 /**
  * Task-5:
