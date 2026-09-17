@@ -552,7 +552,17 @@ const listing0Updated: Listing = { ...listing0, isSold: false, currentOwner: "Ja
  */
 //WRITE YOUR CODE BELOW
 
-console.log(parseInt((listings[2].price).replace('$', '').replace(',', ''))) 
+/* console.log(parseInt((listings[2].price).replace('$', '').replace(',', '')))
+// ^^ in class example of replace operator ^^ */
+
+function realtorFees(house: Listing): number {
+  const price = parseInt(house.price.replace('$', '').replace(',', ''));
+  const fee = price <= 450000 ? price * 0.025 : price * 0.02;
+
+  return fee;
+}
+
+console.log(realtorFees(listings[2]))
 
 /**
  * Task-5:
@@ -560,6 +570,9 @@ console.log(parseInt((listings[2].price).replace('$', '').replace(',', '')))
  * according to their built year
  */
 //WRITE YOUR CODE BELOW
+
+
+
 
 /**
  * Task-6:
