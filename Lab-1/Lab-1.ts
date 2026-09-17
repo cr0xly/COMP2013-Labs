@@ -16,7 +16,7 @@ interface Listing {
     buildingType: string
     storeys: string|number
     title: string
-    builtIn: number|string
+    builtIn: string
     taxes: number|string
     parking: string
   }
@@ -571,7 +571,10 @@ console.log(realtorFees(listings[2]))
  */
 //WRITE YOUR CODE BELOW
 
-
+const listingAscendingly: Listing[] = [...listings];
+listingAscendingly.sort((a, b) => +a.propertySummary.builtIn - +b.propertySummary.builtIn);
+// '+' in front of the builtIn property is used to convert the string value to a number for comparison, same as Number() or parseInt()
+console.log(listingAscendingly)
 
 
 /**
@@ -582,3 +585,4 @@ console.log(realtorFees(listings[2]))
  * This array should result in two listings only
  */
 //WRITE YOUR CODE BELOW
+
