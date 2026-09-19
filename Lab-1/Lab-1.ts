@@ -553,16 +553,16 @@ const listing0Updated: Listing = { ...listing0, isSold: false, currentOwner: "Ja
 //WRITE YOUR CODE BELOW
 
 /* console.log(parseInt((listings[2].price).replace('$', '').replace(',', '')))
-// ^^ in class example of replace operator ^^ */
+   ^^ in class example of replace operator ^^ */
 
 function realtorFees(house: Listing): number {
-  const price = parseInt(house.price.replace('$', '').replace(',', ''));
-  const fee = price <= 450000 ? price * 0.025 : price * 0.02;
+  const price = parseInt(house.price.replace('$', '').replace(',', ''))
+  const fee = price <= 450000 ? price * 0.025 : price * 0.02
 
-  return fee;
+  return fee
 }
 
-console.log(realtorFees(listings[2]))
+console.log(realtorFees(listings[6]))
 
 /**
  * Task-5:
@@ -571,9 +571,8 @@ console.log(realtorFees(listings[2]))
  */
 //WRITE YOUR CODE BELOW
 
-const listingAscendingly: Listing[] = [...listings];
-listingAscendingly.sort((a, b) => +a.propertySummary.builtIn - +b.propertySummary.builtIn);
-// '+' in front of the builtIn property is used to convert the string value to a number for comparison, same as Number() or parseInt()
+const listingAscendingly: Listing[] = [...listings]
+listingAscendingly.sort((a, b) => +a.propertySummary.builtIn - +b.propertySummary.builtIn) // '+' in front of the builtIn property is used to convert the string value to a number for comparison, same as Number() or parseInt()
 console.log(listingAscendingly)
 
 
@@ -586,3 +585,5 @@ console.log(listingAscendingly)
  */
 //WRITE YOUR CODE BELOW
 
+const townhouseListings: Listing[] = listings.filter((listing) => listing.propertySummary.buildingType === "Townhouse")
+console.log(townhouseListings)
