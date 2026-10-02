@@ -9,19 +9,31 @@
 }
 
 .InnerBox {
-  padding: 40px;
+  padding: 20px;
   background-color: #0D0F13;
 
   .ResortContainer {
     display: flex;
-    justify-content: space-around;    
+    justify-content: space-around;
   }
 }
 
 .ResortCard {
   width: 150px;
   text-align: left;
-  margin: 10px;
+  margin: 15px;
+  display:flex;
+  flex-direction: column;
+  
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }  
+  
+  p {
+    margin-bottom: 8px;  
+    color: grey;    
+  }
 
   img {
     width: 100%;
